@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI tư vấn du lịch trường học - SchoolTrip AI</title>
+    <meta name="description"
+        content="SchoolTrip AI cung cấp giải pháp tư vấn du lịch trường học an toàn, hiệu quả bằng trí tuệ nhân tạo.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" style="width: 90%; max-width: 1800px;">
+        <!-- Header: Tên website & Điều hướng chung một hàng -->
+        <header class="main-header animate-fade">
+            <div class="logo">
+                <h1 class="site-title">SchoolTrip AI - STA</h1>
+                <p class="site-tagline">Trợ lý AI tư vấn du lịch dành cho trường học<br>
+                    <span>Lựa chọn điểm đến phù hợp, an toàn và giáo dục chỉ trong vài giây.</span>
+                </p>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active" data-section="home">Trang Chủ</a>
+                <a href="#issues" class="nav-link" data-section="issues">Vấn Đề Thường Gặp</a>
+                <a href="#locations" class="nav-link" data-section="locations">Địa Điểm Du Lịch</a>
+                <a href="#assistant" class="nav-link" data-section="assistant">AI Tư Vấn</a>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- SECTION 1: HOME -->
+            <section id="home" class="page-section active">
+                <div class="home-layout animate-fade" style="animation-delay: 0.2s;">
+                    <!-- Gallery Bên Trái -->
+                    <aside class="side-gallery left">
+                        <div class="gallery-item" onclick="openLocationDetail('củ chi')">
+                            <img src="https://mia.vn/media/uploads/blog-du-lich/dia-dao-cu-chi-12-1721208626.jpg"
+                                alt="Địa đạo Củ Chi">
+                            <div class="gallery-caption">Địa đạo Củ Chi</div>
+                        </div>
+                        <div class="gallery-item" onclick="openLocationDetail('ba vì')">
+                            <img src="https://cdn3.ivivu.com/2023/10/du-lich-ba-vi-ivivu-1.jpg"
+                                alt="Vườn quốc gia Ba Vì">
+                            <div class="gallery-caption">Vườn quốc gia Ba Vì</div>
+                        </div>
+                    </aside>
+
+                    <!-- Nội dung chính: 6 Mục -->
+                    <main class="intro-column">
+                        <div class="intro-box">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Giới thiệu Web</h3>
+                        </div>
+                        <div class="intro-box">
+                            <i class="fas fa-bullseye"></i>
+                            <h3>Mục đích Web</h3>
+                        </div>
+                        <div class="intro-box">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Hiệu quả mang lại</h3>
+                        </div>
+                        <div class="intro-box">
+                            <i class="fas fa-star"></i>
+                            <h3>Điểm nổi bật</h3>
+                        </div>
+                        <div class="intro-box">
+                            <i class="fas fa-book-open"></i>
+                            <h3>Hướng dẫn</h3>
+                        </div>
+                        <div class="intro-box">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Đối tượng sử dụng</h3>
+                        </div>
+                        <div class="intro-box ai-cta" onclick="showSection('assistant')">
+                            <i class="fas fa-robot"></i>
+                            <h3>Khám phá AI ngay</h3>
+                        </div>
+                    </main>
+
+                    <!-- Gallery Bên Phải -->
+                    <aside class="side-gallery right">
+                        <div class="gallery-item" onclick="openLocationDetail('suối tiên')">
+                            <img src="https://bizweb.dktcdn.net/100/101/075/files/cong-vien-van-hoa-suoi-tien.jpg?v=1762078274761"
+                                alt="Suối Tiên">
+                            <div class="gallery-caption">Suối Tiên</div>
+                        </div>
+                        <div class="gallery-item" onclick="openLocationDetail('đầm sen')">
+                            <img src="https://cdn.realtech.com.vn/uploads/gostay/news/4068/kinh-nghiem-vui-choi-cong-vien-nuoc-dam-sen.jpg"
+                                alt="Đầm Sen">
+                            <div class="gallery-caption">Đầm Sen</div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- SECTION 2: ISSUES -->
+            <section id="issues" class="page-section">
+                <div class="glass-card animate-fade">
+                    <h2 class="section-title">Những vấn đề phổ biến khi tổ chức du lịch trường học</h2>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                                <strong>1. Quy mô – không gian – tổ chức đoàn</strong>
+                            </div>
+                            <ul>
+                                <li>Xác định số lượng học sinh phù hợp với điểm đến.</li>
+                                <li>Chia đoàn thành nhóm nhỏ (10–15 HS).</li>
+                                <li>Thiết kế lộ trình tham quan khoa học, hạn chế di chuyển dàn trải.</li>
+                                <li>Ưu tiên địa điểm có hạ tầng an toàn, không gian rộng.</li>
+                                <li>Xác định điểm tập trung rõ ràng tại mỗi khu vực.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+                                <strong>2. Kiểm soát sĩ số và tránh thất lạc</strong>
+                            </div>
+                            <ul>
+                                <li>Di chuyển theo nhóm, không đi riêng lẻ.</li>
+                                <li>Học sinh đeo thẻ nhận diện / mặc đồng phục.</li>
+                                <li>Có trưởng nhóm chịu trách nhiệm theo dõi thành viên.</li>
+                                <li>Giới hạn khu vực hoạt động cho từng nhóm.</li>
+                                <li>Ứng dụng công nghệ định vị – nhận diện khi cần thiết.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-list-ol"></i></div>
+                                <strong>3. Điểm danh và theo dõi học sinh</strong>
+                            </div>
+                            <ul>
+                                <li>Điểm danh tại nhiều mốc thời gian (lên xe – xuống xe – trước/sau hoạt động).</li>
+                                <li>Lập danh sách theo lớp và theo nhóm.</li>
+                                <li>Giáo viên + trưởng nhóm cùng kiểm tra sĩ số.</li>
+                                <li>Ghi nhận ngay trường hợp vắng mặt, thay đổi sĩ số.</li>
+                                <li>Ưu tiên điểm danh điện tử để giảm sai sót.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-user-friends"></i></div>
+                                <strong>4. Quản lý học sinh theo nhóm/lớp</strong>
+                            </div>
+                            <ul>
+                                <li>Nhóm học sinh cố định suốt chuyến đi.</li>
+                                <li>Phân công giáo viên phụ trách cụ thể.</li>
+                                <li>Không cho học sinh tự ý đổi nhóm.</li>
+                                <li>Tổ chức hoạt động theo nhóm.</li>
+                                <li>Trưởng nhóm báo cáo định kỳ cho giáo viên.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-gavel"></i></div>
+                                <strong>5. Ý thức và kỷ luật</strong>
+                            </div>
+                            <ul>
+                                <li>Phổ biến nội quy trước chuyến đi.</li>
+                                <li>Cam kết 3 bên: học sinh – phụ huynh – nhà trường.</li>
+                                <li>Giáo dục ý thức tập thể và kỹ năng tham gia ngoại khóa.</li>
+                                <li>Khen thưởng – nhắc nhở kịp thời.</li>
+                                <li>Gắn trách nhiệm cá nhân với trách nhiệm nhóm.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                                <strong>6. An toàn và sức khỏe</strong>
+                            </div>
+                            <ul>
+                                <li>Thu thập thông tin sức khỏe học sinh.</li>
+                                <li>Chuẩn bị thuốc và dụng cụ y tế cơ bản.</li>
+                                <li>Có người phụ trách y tế trong đoàn.</li>
+                                <li>Hạn chế hoạt động mạo hiểm.</li>
+                                <li>Có phương án xử lý sự cố khẩn cấp.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-smile-beam"></i></div>
+                                <strong>7. Tâm lý học sinh</strong>
+                            </div>
+                            <ul>
+                                <li>Chuẩn bị tâm lý, làm quen trước chuyến đi.</li>
+                                <li>Quan tâm học sinh nhút nhát, lo lắng.</li>
+                                <li>Tạo môi trường tham quan thoải mái, không áp lực.</li>
+                                <li>Xử lý mâu thuẫn kịp thời.</li>
+                                <li>Duy trì không khí tích cực, vui vẻ.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-phone-alt"></i></div>
+                                <strong>8. Liên lạc và thông tin</strong>
+                            </div>
+                            <ul>
+                                <li>Thiết lập kênh liên lạc chung.</li>
+                                <li>Phân cấp liên lạc theo nhóm.</li>
+                                <li>Cung cấp số điện thoại khẩn cấp.</li>
+                                <li>Đảm bảo thiết bị liên lạc hoạt động liên tục.</li>
+                                <li>Thông tin kịp thời cho phụ huynh.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                                <strong>9. Nhân sự quản lý</strong>
+                            </div>
+                            <ul>
+                                <li>Đảm bảo tỉ lệ giáo viên/học sinh phù hợp.</li>
+                                <li>Phân công nhiệm vụ rõ ràng.</li>
+                                <li>Tập huấn kỹ năng quản lý du lịch học đường.</li>
+                                <li>Phối hợp giáo viên – hướng dẫn viên.</li>
+                                <li>Có người phụ trách chung toàn đoàn.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                                <strong>10. Thời gian và lịch trình</strong>
+                            </div>
+                            <ul>
+                                <li>Xây dựng lịch trình chi tiết, khoa học.</li>
+                                <li>Quy định giờ giấc rõ ràng.</li>
+                                <li>Có thời gian dự phòng.</li>
+                                <li>Nhắc nhở tuân thủ đúng giờ.</li>
+                                <li>Hạn chế thay đổi lịch trình tùy tiện.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                                <strong>11. Phối hợp các bên</strong>
+                            </div>
+                            <ul>
+                                <li>Thống nhất kế hoạch nhà trường – doanh nghiệp du lịch.</li>
+                                <li>Phân định trách nhiệm rõ ràng.</li>
+                                <li>Cung cấp thông tin đầy đủ cho phụ huynh.</li>
+                                <li>Duy trì trao đổi hai chiều.</li>
+                                <li>Đánh giá – rút kinh nghiệm sau chuyến đi.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                                <strong>12. Quy trình và pháp lý</strong>
+                            </div>
+                            <ul>
+                                <li>Xây dựng quy trình tổ chức chuẩn.</li>
+                                <li>Hoàn thiện hồ sơ, thủ tục pháp lý.</li>
+                                <li>Có giấy cam kết, giấy đồng ý của phụ huynh.</li>
+                                <li>Mua bảo hiểm du lịch cho học sinh.</li>
+                                <li>Có phương án xử lý rủi ro bằng văn bản.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                                <strong>13. Ứng dụng công nghệ</strong>
+                            </div>
+                            <ul>
+                                <li>Sử dụng phần mềm quản lý học sinh.</li>
+                                <li>Thẻ QR / vòng tay nhận diện.</li>
+                                <li>Số hóa danh sách – hồ sơ.</li>
+                                <li>Kết nối dữ liệu giáo viên – HDV – nhà trường.</li>
+                                <li>Cảnh báo sớm rủi ro bằng công nghệ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: LOCATIONS -->
+            <section id="locations" class="page-section">
+                <div class="glass-card animate-fade">
+                    <h2 class="section-title">Địa điểm du lịch gợi ý</h2>
+                    <p class="section-tagline">Danh sách các địa điểm du lịch phù hợp cho học sinh, được chọn lọc dựa
+                        trên tiêu chí an toàn, giá trị giáo dục và trải nghiệm thực tế (nhấn vào tên của các địa điểm
+                        bên dưới để biết thêm thông tin).</p>
+                    <div class="location-category">
+                        <h3><i class="fas fa-monument"></i> Khu di tích lịch sử</h3>
+                        <div class="location-subgrid">
+                            <div class="location-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg"
+                                    class="location-img" alt="Văn Miếu">
+                                <h4 class="loc-link" data-loc="văn miếu">Văn Miếu – Quốc Tử Giám</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/09/2-8.jpg"
+                                    class="location-img" alt="Dinh Độc Lập">
+                                <h4 class="loc-link" data-loc="dinh độc lập">Dinh Độc Lập</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://sakos.vn/wp-content/uploads/2024/06/gt-1-2-2.jpg" class="location-img"
+                                    alt="Củ Chi">
+                                <h4 class="loc-link" data-loc="củ chi">Địa đạo Củ Chi</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://dulichnewtour.vn/ckfinder/images/Tours/Domestic/Hue/co-do-hue.jpg"
+                                    class="location-img" alt="Huế">
+                                <h4 class="loc-link" data-loc="huế">Cố đô Huế</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-category">
+                        <h3><i class="fas fa-leaf"></i> Khu sinh thái - Trải nghiệm</h3>
+                        <div class="location-subgrid">
+                            <div class="location-item">
+                                <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/11/khu-du-lich-tre-viet-2-1-e1510743089533.jpg"
+                                    class="location-img" alt="Tre Việt">
+                                <h4 class="loc-link" data-loc="tre việt">Làng du lịch Tre Việt</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://khpt.1cdn.vn/2023/09/18/rung-ngap-man-can-gio-nhin-tu-tren-cao-anh-minh-hoa.jpg"
+                                    class="location-img" alt="Cần Giờ">
+                                <h4 class="loc-link" data-loc="cần giờ">Sinh thái Cần Giờ</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/06/du-lich-ba-vi-vuon-quoc-gia-2.jpg"
+                                    class="location-img" alt="Ba Vì">
+                                <h4 class="loc-link" data-loc="ba vì">Vườn quốc gia Ba Vì</h4>
+                            </div>
+                            <div class="location-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMuCHtJlPSdcML4CmH7RAK4549h7Vl0GuxYg&s"
+                                    class="location-img" alt="Thảo Cầm Viên">
+                                <h4 class="loc-link" data-loc="thảo cầm viên">Thảo Cầm Viên Sài Gòn</h4>
+                            </div>
+                        </div>
+                        <div class="location-category">
+                            <h3><i class="fas fa-umbrella-beach"></i> Khu vui chơi - Nghỉ dưỡng</h3>
+                            <div class="location-subgrid">
+                                <div class="location-item">
+                                    <img src="https://gaohouse.vn/wp-content/uploads/2023/07/khu-du-lich-suoi-tien_d6775284e6f94581952951744f0d4bc0_grande.jpg"
+                                        class="location-img" alt="Suối Tiên">
+                                    <h4 class="loc-link" data-loc="suối tiên">Suối Tiên (TP.HCM)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGnHf1VqjBkf8Tk3B-DIzM_YwrMFQKuGNS5g&s"
+                                        class="location-img" alt="Đầm Sen">
+                                    <h4 class="loc-link" data-loc="đầm sen">Đầm Sen (TP.HCM)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://www.dulichdongnai.com.vn/UserFiles/Images/2020/05/DNT_Suoimo_Lake.jpg"
+                                        class="location-img" alt="Suối Mơ">
+                                    <h4 class="loc-link" data-loc="suối mơ">Công viên Suối Mơ (Đồng Nai)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/11/dai-nam-1.jpg"
+                                        class="location-img" alt="Đại Nam">
+                                    <h4 class="loc-link" data-loc="đại nam">Đại Nam (Bình Dương)</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-category">
+                            <h3><i class="fas fa-map-marked-alt"></i> Những khu du lịch khác</h3>
+                            <div class="location-subgrid">
+                                <div class="location-item">
+                                    <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efb112fe3558ee6bc7b66ddd87924aa3b87bf82762d6fd2473669678d84d78c158c397a7a987585446dc3241c4a82a72e9e667d376bf869970b83bd2a9ea12e0ea/2-da-lat-trong-suong-2247.jpg"
+                                        class="location-img" alt="Đà Lạt">
+                                    <h4 class="loc-link" data-loc="đà lạt">Thành phố Đà Lạt (Lâm Đồng)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://cdn2.tuoitre.vn/471584752817336320/2023/4/18/tp-nha-trang-16818161974101240202452.jpeg"
+                                        class="location-img" alt="Nha Trang">
+                                    <h4 class="loc-link" data-loc="nha trang">Thành phố Nha Trang (Khánh Hòa)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://cdn3.ivivu.com/2024/12/du-lich-phan-thiet-ivivu1.jpg"
+                                        class="location-img" alt="Phan Thiết">
+                                    <h4 class="loc-link" data-loc="phan thiết">Thành phố Phan Thiết (Bình Thuận)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://www.agoda.com/wp-content/uploads/2024/07/vung-tau-vietnam-featured-1244x700.jpg"
+                                        class="location-img" alt="Vũng Tàu">
+                                    <h4 class="loc-link" data-loc="vũng tàu">Thành phố Vũng Tàu (Bà Rịa - Vũng Tàu)</h4>
+                                </div>
+                            </div>
+                            <div class="location-subgrid">
+                                <div class="location-item">
+                                    <img src="https://media.loveitopcdn.com/3426/thumb/nui-ba-1.jpg"
+                                        class="location-img" alt="Núi Bà Đen">
+                                    <h4 class="loc-link" data-loc="núi bà đen">Núi Bà Đen (Tây Ninh)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://phuquoctrip.com/files/images/vui-choi-phu-quoc/phu-quoc-united-center/vinwonders/vinwonder.jpg"
+                                        class="location-img" alt="VinWonders Phú Quốc">
+                                    <h4 class="loc-link" data-loc="vinwonders phú quốc">VinWonders Phú Quốc (Kiên Giang)
+                                    </h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://cdn3.ivivu.com/2024/04/sun-world-ba-na-hills-ivivu45.jpg"
+                                        class="location-img" alt="Ba Na Hills">
+                                    <h4 class="loc-link" data-loc="ba na hills">Sun World Ba Na Hills (Đà Nẵng)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_854/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/n4nvahlzlxak6yve5z7n/V%C3%A9XeBu%C3%BDt%C4%90iGi%E1%BB%AFaN%C3%BAiTh%E1%BA%A7nT%C3%A0i,Ho%C3%A0Ph%C3%BATh%C3%A0nhV%C3%A0Th%C3%A0nhph%E1%BB%91%C4%90%C3%A0N%E1%BA%B5ng.jpg"
+                                        class="location-img" alt="Núi Thần Tài">
+                                    <h4 class="loc-link" data-loc="núi thần tài">Suối khoáng nóng Núi Thần Tài (Đà Nẵng)
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="location-subgrid">
+                                <div class="location-item">
+                                    <img src="https://cms.junglebosstours.com/assets/78ecd446-85f1-417f-a0ef-4045fc245f43?width=1920&height=1280"
+                                        class="location-img" alt="Phong Nha">
+                                    <h4 class="loc-link" data-loc="phong nha">Phong Nha – Kẻ Bàng (Quảng Bình)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://trangandanhthang.vn/wp-content/uploads/2025/06/khu-du-lich-trang-an-1.png"
+                                        class="location-img" alt="Tràng An">
+                                    <h4 class="loc-link" data-loc="tràng an">Quần thể danh thắng Tràng An (Ninh Bình)
+                                    </h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/1135769927hotram-1704774975087.jpg"
+                                        class="location-img" alt="Hồ Tràm">
+                                    <h4 class="loc-link" data-loc="hồ tràm">Biển Hồ Tràm (Bà Rịa – Vũng Tàu)</h4>
+                                </div>
+                                <div class="location-item">
+                                    <img src="https://vcdn1-dulich.vnecdn.net/2022/04/08/binhbavnexpressruahayxin-16493-3206-1982-1649406973.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=21Ay78ESvpLp2oWvt74PyQ"
+                                        class="location-img" alt="Bình Ba">
+                                    <h4 class="loc-link" data-loc="đảo bình ba">Đảo Bình Ba (Cam Ranh)</h4>
+                                </div>
+                            </div>
+                        </div>
+
+            </section>
+
+            <!-- SECTION 4: LOCATION DETAIL -->
+            <section id="location-detail" class="page-section">
+                <div class="glass-card animate-fade">
+                    <div id="detail-content">
+                        <!-- Dynamic content here -->
+                    </div>
+                    <div style="margin-top: 40px; text-align: center;">
+                        <button class="btn btn-outline" onclick="showSection('locations')">
+                            <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: ASSISTANT -->
+            <section id="assistant" class="page-section">
+                <div class="glass-card animate-fade chat-container" style="max-width: 960px; margin: 0 auto;">
+                    <div class="chat-header-text" style="text-align: left; margin-bottom: 25px; padding-left: 10px;">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 8px; margin-top: 0;">Trợ lí
+                            AI - STA</h2>
+                        <p class="section-tagline"
+                            style="text-align: left; margin: 0; max-width: 100%; font-style: normal; opacity: 0.85;">Trợ
+                            lí AI giúp tư vấn địa điểm, quản lí học sinh và giải quyết các vấn đề trong chuyến du lịch
+                            trường học. STA luôn sẵn sàng hỗ trợ bạn 24/7. Bạn có thể hỏi bất cứ gì liên quan đến du
+                            lịch trường học.</p> <br>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai animate-fade">
+                            🤖 CHUYÊN GIA TƯ VẤN DU LỊCH TRƯỜNG HỌC (STA)<br><br>
+                            Chào bạn! Tôi là STA, trợ lý AI được thiết kế để cố vấn chuyên môn cho các chuyến đi của
+                            học sinh.<br><br>
+                            Bạn có thể yêu cầu tôi tư vấn sâu về:<br>
+                            📍 12 Địa điểm du lịch tiêu chuẩn trên hệ thống (Ví dụ: "Lưu ý an toàn tại Củ Chi", "Giá
+                            vé Suối Mơ"...)<br>
+                            🛡️ 13 Vấn đề quản trị & Rủi ro thường gặp (Ví dụ: "Cách điểm danh đoàn đông", "Xử lý kỷ
+                            luật học sinh"...)<br>
+                            💰 Tối ưu ngân sách: "Ngân sách 100k đi đâu?"<br><br>
+                            💬 Mời bạn chia sẻ nhu cầu để tôi hỗ trợ ngay.
+                        </div>
+                    </div>
+                    <div id="chat-suggestions" class="chat-suggestions">
+                        <!-- Suggestions will be populated by JS -->
+                    </div>
+                    <form id="chat-form" class="chat-input-area">
+                        <input type="text" id="chat-input" class="chat-input"
+                            placeholder="Nhập câu hỏi về du lịch trường học..." required>
+                        <button type="submit" class="btn" style="padding: 14px 20px;">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Hàng 4: Liên hệ và Social -->
+        <footer class="site-footer animate-fade" style="animation-delay: 0.4s;">
+            <div class="footer-contact">
+                <p><strong>Liên hệ:</strong> 13.vuvietha.7a2@gmail.com | SĐT: 0366411601</p>
+                <p>Địa chỉ: Trường Cao Đẳng Công Nghệ và Quản Trị Sonadezi</p>
+                <p>web được thiết kế bởi nhóm: sonadezi 4</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+                <a href="#" class="social-icon" title="Zalo"><i class="fas fa-comment-dots"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Cấu trúc Pop-up (Modal) -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-header">
+                <i id="modal-icon" class="fas"></i>
+                <h2 id="modal-title">Tiêu đề</h2>
+            </div>
+            <div class="modal-body" id="modal-body">
+                Nội dung đang tải...
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
